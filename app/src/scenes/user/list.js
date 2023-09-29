@@ -120,6 +120,7 @@ const Create = () => {
                   console.log(e);
                   toast.error("Some Error!", e.code);
                 }
+                console.log(values);
                 setSubmitting(false);
               }}>
               {({ values, handleChange, handleSubmit, isSubmitting }) => (

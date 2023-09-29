@@ -6,6 +6,7 @@ import Loader from "../../components/loader";
 import LoadingButton from "../../components/loadingButton";
 import api from "../../services/api";
 
+
 import toast from "react-hot-toast";
 
 export default function EditProject() {
@@ -28,7 +29,7 @@ export default function EditProject() {
     if (!confirm) return;
     await api.remove(`/project/${id}`);
     toast.success("successfully removed!");
-    history.push("/projects");
+    history.push("/project");
   }
 
   if (!project) return <Loader />;
